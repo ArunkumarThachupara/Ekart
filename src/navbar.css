@@ -1,0 +1,96 @@
+.navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: white;
+    background-color: black;
+    width: 100%;
+    text-decoration: 'none';
+    z-index: 1;
+    top:0;
+    padding: 20px;
+}
+
+.navbar a {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    padding: 5px;
+    margin: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.navbar h3{
+    position: absolute;
+    left: 20px;
+}
+
+/* .navbar>a>button:hover{
+    background-color: whitesmoke;
+    opacity: 65%;
+    filter: alpha(opacity=90);
+    cursor: pointer;
+    color: black;
+    filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+    
+}
+ */
+.navbar div{
+    position: absolute;
+    right: 35px;
+}
+.navbar img{
+    margin: 20px;
+    padding: 5px;
+}
+ .searchIcon{
+    width:20px;
+ }
+
+ .cart-icon {
+    position: relative;
+  }
+  
+  .cart-icon img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  /* Styling for the cart badge */
+  .wishlist-icon {
+    margin: 20px 10px; /* Adjust margin for proper spacing */
+}
+
+/* Styling for the wishlist badge */
+.wishlist-badge {
+    position: absolute;
+    top: 15%; /* Adjust the top position as needed */
+    right: -10px; /* Keep the right position for the cart badge */
+    background-color: #ff5733;
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+  .cart-badge {
+    position: absolute;
+    top: 15%;
+    right: -10px;
+    background-color: #ff5733; /* Background color of the badge */
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .account{
+    display: flex;
+    flex-direction: column;
+  }

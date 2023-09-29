@@ -1,0 +1,137 @@
+.wishlist{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    top:25%;
+    left: 10%;
+    right:0;
+    bottom: 0;
+    margin: auto;
+    column-gap: 35px;
+    row-gap: 35px;
+    align-items: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    padding: 100px;
+}
+
+
+.wishlist-items{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    height: 400px;
+    background-color: white;
+    align-items: flex-start;
+    justify-content: center;
+}
+.wishlist-items img{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+}
+.wishlist-items:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(3px 3px 3px gray);
+}
+.wishlist-items p{
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 25%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially hide the icons */
+    transition: opacity 0.3s; /* Add transition effect for smooth visibility */
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+  }
+  
+  .wishlist-items:hover .icons {
+    opacity: 1; /* Show the icons when hovering over the itemWrap */
+  }
+  
+  .icon-background {
+    width: 40px; /* Adjust the circle size as needed */
+    height: 40px; /* Adjust the circle size as needed */
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .icon-background img {
+    width: 24px; /* Adjust the icon size as needed */
+    height: 24px; /* Adjust the icon size as needed */
+  }
+
+  .icons :hover{
+    transform: scale(1.05);
+    filter: drop-shadow(3px 3px 3px gray);
+  }
+
+  .tooltip {
+    position: absolute;
+    bottom: 120%;
+    width: 70px;
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+  }
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent  transparent  transparent;
+    
+  }
+  .icon-background:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .heading{
+    position: relative;
+    top:85px;
+    text-align: center;
+  }
+
+  .emptyWishlist{
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.remove-wishlist-item{
+  position: absolute;
+}
+.remove-wishlist-item img{
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  bottom:160px;
+  left:170px;
+}
