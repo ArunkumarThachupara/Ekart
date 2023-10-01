@@ -33,6 +33,7 @@ function Register() {
       if (response.status === 201) {
           // You can handle successful registration here
           // For example, redirect to login page
+          alert('Registration Successful, Please Login');
           navigate('/login');
       } else {
           // Handle registration failure

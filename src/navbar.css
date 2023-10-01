@@ -40,7 +40,7 @@
  */
 .navbar div{
     position: absolute;
-    right: 35px;
+    /* right: 35px; */
 }
 .navbar img{
     margin: 20px;
@@ -81,7 +81,7 @@
   .cart-badge {
     position: absolute;
     top: 15%;
-    right: -10px;
+    right: 30px;
     background-color: #ff5733; /* Background color of the badge */
     color: #fff;
     border-radius: 50%;
@@ -93,4 +93,12 @@
   .account{
     display: flex;
     flex-direction: column;
+  }
+
+  .search-container {
+    margin-right: auto; /* Push the search component to the left */
+  }
+
+  .align-right{
+    right: 20px;
   }

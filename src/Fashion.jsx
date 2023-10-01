@@ -39,10 +39,6 @@ function Fashion({addToCart , addToWishList ,wishListItems}){
                         <img alt="bag" src="../assets/bagblack.svg" />
                         <span className="tooltip" >Add to Cart</span>
                     </div>
-                    <div className="icon-background">
-                        <img alt="bag" src="../assets/view.svg" />
-                        <span className="tooltip">View Details</span>
-                    </div>
                 </div>
             </div>
         ))} 

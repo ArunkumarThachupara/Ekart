@@ -2,7 +2,8 @@ import './navbar.css';
 import React,{ useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserAuthContext  } from "./UserAuth";
-function Navbar({ cartItemCount , wishListItemCount}){
+import Search from './Search';
+function Navbar({ cartItemCount , wishListItemCount, onSearch }){
     const { currentUser, logoutUser } = useContext(UserAuthContext);
     console.log("currentUser:", currentUser);
     return ( <div>
@@ -11,10 +12,9 @@ function Navbar({ cartItemCount , wishListItemCount}){
             <Link to="/btsfashion">BTS Fashion</Link>
             <Link to="/btsalbums">BTS Albums</Link>
             <Link to="/bt21collection">BT21 Collection</Link>
-            {currentUser ? (<span style={{ color: "red" }}>Hello, {currentUser.firstName}!</span>) : ""}
-            <div>
-                <img className="searchIcon" alt="search" src="../assets/search.svg" ></img>
-
+            {currentUser ? (<h2 style={{ color: "red", fontWeight: "1000"}}>Hello, {currentUser.firstName}!</h2>) : ""}
+            <div className='align-right'>
+                <Search onSearch={onSearch} />
                 {currentUser ? (<Link to="/account"><img className="searchIcon" alt="account" src="../assets/account.svg" ></img></Link>)
                  : (<Link to="/register"><img className="searchIcon" alt="account" src="../assets/account.svg" ></img></Link>)
                 }

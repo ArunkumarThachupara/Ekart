@@ -28,11 +28,17 @@ function Cart({ items, removeFromCart, isAuthenticated}) {
 
   useEffect(() => {
     let total = 0;
-    items.forEach((item) => {
-      total += item.price;
-    });
+  items.forEach((item) => {
+    // Assuming item.price is a string, convert it to a floating-point number
+    const priceAsNumber = parseFloat(item.price); // Use parseFloat for decimal values
+    // const priceAsNumber = parseInt(item.price, 10); // Use parseInt for integer values
+
+    // Check if priceAsNumber is a valid number (not NaN)
+    if (!isNaN(priceAsNumber)) {
+      total += priceAsNumber;
+    }
     setTotalPrice(total);
-  }, [items]);
+  }, [items])});
 
   const handleRemoveItem = (index)=>{
     removeFromCart(index);
@@ -103,9 +109,8 @@ function Cart({ items, removeFromCart, isAuthenticated}) {
                 )}
           </div>
           {showOrderSummary && (
-        <div className="order-summary">
+        <div className="checkout">
           {/* Display order summary here */}
-          <p>Order Summary:</p>
           {/* Include item names, images, prices, and expected delivery date */}
           {/* Add a button to proceed to pay */}
           <button onClick={handleCheckout}>Proceed to Pay</button>
@@ -117,7 +122,7 @@ function Cart({ items, removeFromCart, isAuthenticated}) {
           <p>Order placed successfully!</p>
           {/* Display order ID and expected delivery date */}
           <p>Order ID: 1234567</p>
-          <p>Expected Delivery Date: {new Date().toLocaleDateString()}</p>
+          <p>Expected Delivery Date: {"05/10/2023"}</p>
         </div>
       )}
       </div>

@@ -22,10 +22,6 @@ import "./WishList.css"; // Create a CSS file for styling the sidebar
                         <img alt="bag" src="../assets/bagblack.svg" />
                         <span className="tooltip" >Move to Cart</span>
                     </div>
-                    <div className="icon-background">
-                        <img alt="bag" src="../assets/view.svg" />
-                        <span className="tooltip">View Details</span>
-                    </div>
                 </div>
             </div>
           ))}
